@@ -38,7 +38,7 @@ list
   - `Parallel Adder/Subtractor / PAS` **(N-bit)**
   - `Multiplexer 4x1 / MUX 4x1`
   - `Demultiplexer 1x4 / DEMUX 1x4`
-  - `Encoder (priority) / ENC` **(N-bit)**
+  - Encoder (priority) / ENC **(N-bit)** (WiP)
   - `Decoder / DEC` **(N-bit)**
   - `Comparator / Comp` **(N-bit)**
   - `BCD-Gray Converter / B2G conv` **(N-bit)**
@@ -51,12 +51,12 @@ list
   - `T F/F`
   - `JK F/F`
 
-- Counter **(WiP)**
-  - BCD Ripple
-  - D Ripple
-  - T Ripple
-  - Ring
-  - Johnson
+- Counter **(WiP)** (updated 05/27/2021 21:54:04 KST / GMT+9)
+  - `BCD Ripple`
+  - `D Ripple` **(N-bit)**
+  - `T Ripple` **(N-bit)**
+  - `Ring` **(N-bit)**
+  - `Johnson` **(N-bit)**
   - Up-Down
 
 - Register **(WiP)**

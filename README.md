@@ -38,7 +38,7 @@ list
   - `Parallel Adder/Subtractor / PAS` **(N-bit)**
   - `Multiplexer 4x1 / MUX 4x1`
   - `Demultiplexer 1x4 / DEMUX 1x4`
-  - `Encoder (priority) / ENC` **(N-bit)**
+  - Encoder (priority) / ENC **(WiP)**
   - `Decoder / DEC` **(N-bit)**
   - `Comparator / Comp` **(N-bit)**
   - `BCD-Gray Converter / B2G conv` **(N-bit)**
@@ -51,19 +51,20 @@ list
   - `T F/F`
   - `JK F/F`
 
-- Counter **(WiP)**
-  - BCD Ripple
-  - D Ripple
-  - T Ripple
-  - Ring
-  - Johnson
+- Counter **(WiP)** (updated 12/23/2021 12:23:55 KST / GMT+9)
+  - `BCD Ripple`
+  - `D Ripple`
+  - `T Ripple`
+  - `Ring`
+  - `Johnson`
   - Up-Down
 
-- Register **(WiP)**
-  - PIPO (load)
-  - PISO (load)
-  - SISO
-  - SIPO
+- Register (updated 12/23/2021 12:23:55 KST / GMT+9)
+  - `PIPO (load)`
+  - `PISO (load)`
+  - `SISO`
+  - `SIPO`
+  - `Universal Shift Register`
 
 - __etc__ (updated 05/22/2021 21:28:12 KST / GMT+9)
   - `Hz1` (No PWM)

@@ -36,8 +36,8 @@ list
   - `Full Subtractor / FS`
   - `Parallel Adder / PA` **(N-bit)**
   - `Parallel Adder/Subtractor / PAS` **(N-bit)**
-  - `Multiplexer 4x1 / MUX 4x1`
-  - `Demultiplexer 1x4 / DEMUX 1x4`
+  - `Multiplexer 4x1 / MUX 4x1` **(Parameterized)**
+  - `Demultiplexer 1x4 / DEMUX 1x4` **(Parameterized)**
   - Encoder (priority) / ENC **(WiP)**
   - `Decoder / DEC` **(N-bit)**
   - `Comparator / Comp` **(N-bit)**

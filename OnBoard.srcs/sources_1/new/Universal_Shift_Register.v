@@ -48,17 +48,17 @@ module Universal_Shift_Register#(parameter size=4) (
         begin : USR
             if(v == 0) 
             begin : MUX 
-                Multiplexer_4x1 mux(.o(muxo[v]), .sel({sel1, sel0}), .i0(o[v]), .i1(o[v+1]), .i2(left), .i3(i[v]));
+                Multiplexer_4x1#(1) mux(.o(muxo[v]), .sel({sel1, sel0}), .i0(o[v]), .i1(o[v+1]), .i2(left), .i3(i[v]));
             end
                         
             else if(v == size-1)
             begin : MUX
-                Multiplexer_4x1 mux(.o(muxo[v]), .sel({sel1, sel0}), .i0(o[v]), .i1(right), .i2(o[v-1]), .i3(i[v]));
+                Multiplexer_4x1#(1) mux(.o(muxo[v]), .sel({sel1, sel0}), .i0(o[v]), .i1(right), .i2(o[v-1]), .i3(i[v]));
             end
             
             else
             begin : MUX
-                Multiplexer_4x1 mux(.o(muxo[v]), .sel({sel1, sel0}), .i0(o[v]), .i1(o[v+1]), .i2(o[v-1]), .i3(i[v]));
+                Multiplexer_4x1#(1) mux(.o(muxo[v]), .sel({sel1, sel0}), .i0(o[v]), .i1(o[v+1]), .i2(o[v-1]), .i3(i[v]));
             end
             
             D_FF DFF(.q(o[v]), .clk(clk), .preset_n(1'b1), .reset_n(reset_n), .d(muxo[v]));

@@ -21,21 +21,21 @@
 
 
 module Tb_MUX4x1();
-    reg sel0;
-    reg sel1;
-    reg in0;
-    reg in1;
-    reg in2;
-    reg in3;
+    parameter size = 4;
     
-    wire out;
+    reg [1:0]sel;
+    reg [size-1:0]in0;
+    reg [size-1:0]in1;
+    reg [size-1:0]in2;
+    reg [size-1:0]in3;
     
-    Multiplexer_4x1 sim(.out(out), .sel0(sel0), .sel(sel1), .in0(in0), .in1(in1), .in2(in2), .in3(in3));
+    wire [size-1:0]out;
+    
+    Multiplexer_4x1#(size) sim(.o(out), .sel(sel), .i0(in0), .i1(in1), .i2(in2), .i3(in3));
     
     initial
     begin
-        sel0 = 0;
-        sel1 = 1;
+        sel = 2'b00;
         in0 = 0;
         in1 = 0;
         in2 = 0;
@@ -44,13 +44,14 @@ module Tb_MUX4x1();
     
     initial
     begin
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
-        #100 sel0=$urandom%2; sel1=$urandom%2; in0=$urandom%2; in1=$urandom%2; in2=$urandom%2; in3=$urandom%2;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
+        #100 sel=$urandom%4; in0=$urandom%16; in1=$urandom%16; in2=$urandom%16; in3=$urandom%16;
     end
 endmodule

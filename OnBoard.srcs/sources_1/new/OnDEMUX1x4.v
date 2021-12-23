@@ -15,7 +15,6 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Revision 0.02 - Change Code
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
@@ -27,5 +26,5 @@ module OnDEMUX1x4(
     input [3:0]btn
     );
     
-    Demultiplexer_1x4 demux(.out0(led[0]), .out1(led[1]), .out2(led[2]), .out3(led[3]), .sel0(sw[0]), .sel1(sw[1]), .in(btn[0]));
+    Demultiplexer_1x4#(1) demux(.out0(led[0]), .out1(led[1]), .out2(led[2]), .out3(led[3]), .sel(sw[1:0]), .in(btn[0]));
 endmodule

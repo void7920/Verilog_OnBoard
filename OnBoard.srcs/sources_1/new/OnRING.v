@@ -4,11 +4,11 @@
 // Engineer: 
 // 
 // Create Date: 2021/12/22 20:09:55
-// Design Name: 
+// Design Name: Ring Counter
 // Module Name: OnRING
-// Project Name: 
+// Project Name: Ring Counter 
 // Target Devices: 
-// Tool Versions: 
+// Tool Versions: Vivado 2021.2
 // Description: 
 // 
 // Dependencies: 

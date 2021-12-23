@@ -20,7 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Nbit_Encoder(
-
+module Nbit_Encoder #(parameter osize = 3, parameter isize = 2**osize) (
+    out,
+    in
     );
+    
+    output [oszie-1:0]out;
+    input [isize-1:0]in;
+    
+    assign out = $clog2(in);
 endmodule

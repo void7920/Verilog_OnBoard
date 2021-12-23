@@ -3,12 +3,12 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2021/12/22 20:09:55
-// Design Name: Johnson Counter 
-// Module Name: OnJOHNSON
-// Project Name: Johnson Counter  
+// Create Date: 2021/12/23 12:05:31
+// Design Name: 
+// Module Name: OnUNIVERSALSHIFT
+// Project Name: 
 // Target Devices: 
-// Tool Versions: Vivado 2021.2
+// Tool Versions: 
 // Description: 
 // 
 // Dependencies: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OnJOHNSON(
+module OnUNIVERSALSHIFT(
     output led6_g,
     output [3:0]led,
     input sysclk,
@@ -33,5 +33,5 @@ module OnJOHNSON(
     Hz1#(125000000, 1) hz1_0(.oclk(clk), .iclk(sysclk));
     Hz1#(125000000, 1) hz1_1(.oclk(led6_g), .iclk(sysclk));
     
-    Jonshon #(4) J(.Q(led), .clk(clk), .reset_n(btn[0]));
+    Universal_Shift_Register#(4) USR(.o(led), .clk(clk), .reset_n(1'b1), .s0(sw[0]), .s1(sw[1]), .l(sw[3]), .r(sw[2]), .i(btn));
 endmodule

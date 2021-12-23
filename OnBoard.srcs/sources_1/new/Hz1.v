@@ -6,7 +6,7 @@
 // Create Date: 2021/05/25 17:41:12
 // Design Name: 1 Hz
 // Module Name: Hz1
-// Project Name: 1Hz
+// Project Name: 1 Hz
 // Target Devices: 
 // Tool Versions: Vivado 2020.2.2
 // Description: 

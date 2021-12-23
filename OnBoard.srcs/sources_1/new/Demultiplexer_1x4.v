@@ -15,56 +15,53 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Revision 0.02 - Change Code
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Demultiplexer_1x4(
-    out0,
-    out1,
-    out2,
-    out3,
-    sel0,
-    sel1,
-    in
+module Demultiplexer_1x4 #(parameter size = 4)(
+    o0,
+    o1,
+    o2,
+    o3,
+    sel,
+    i
     );
     
-    output reg out0;
-    output reg out1;
-    output reg out2;
-    output reg out3;
-    input sel0;
-    input sel1;
-    input in;
+    output reg [size-1:0]o0;
+    output reg [size-1:0]o1;
+    output reg [size-1:0]o2;
+    output reg [size-1:0]o3;
+    input [1:0]sel;
+    input [size-1:0]i;
     
     always@(*)
     begin
-        case({sel1, sel0})
-            2'b00 : begin 
-                       out0 = in;
-                       out1 = 0;
-                       out2 = 0;
-                       out3 = 0;
+        case(sel)
+            'b00 :  begin 
+                       o0 = i;
+                       o1 = 0;
+                       o2 = 0;
+                       o3 = 0;
                     end
-            2'b01 : begin 
-                       out0 = 0;
-                       out1 = in;
-                       out2 = 0;
-                       out3 = 0;
+            'b01 :  begin 
+                       o0 = 0;
+                       o1 = i;
+                       o2 = 0;
+                       o3 = 0;
                     end
-            2'b10 : begin 
-                       out0 = 0;
-                       out1 = 0;
-                       out2 = in;
-                       out3 = 0;
+            'b10 :  begin 
+                       o0 = 0;
+                       o1 = 0;
+                       o2 = i;
+                       o3 = 0;
                     end
-            2'b11 : begin 
-                       out0 = 0;
-                       out1 = 0;
-                       out2 = 0;
-                       out3 = in;
+            'b11 :  begin 
+                       o0 = 0;
+                       o1 = 0;
+                       o2 = 0;
+                       o3 = i;
                     end
         endcase
     end

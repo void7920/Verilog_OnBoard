@@ -15,38 +15,35 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Revision 0.02 - Change Code
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Multiplexer_4x1(
-    out,
-    sel0,
-    sel1,
-    in0,
-    in1,
-    in2,
-    in3
+module Multiplexer_4x1 #(parameter size=4)(
+    o,
+    sel,
+    i0,
+    i1,
+    i2,
+    i3
     );
     
-    output reg out;
-    input sel0;
-    input sel1;
-    input in0;
-    input in1;
-    input in2;
-    input in3;
+    output reg [size-1:0]o;
+    input [1:0]sel;
+    input [size-1:0]i0;
+    input [size-1:0]i1;
+    input [size-1:0]i2;
+    input [size-1:0]i3;
     
     always@(*)
     begin
-        case({sel1, sel0})
-            2'b00 : out = in0;
-            2'b01 : out = in1;
-            2'b10 : out = in2;
-            2'b11 : out = in3;
-            default : out = in0;
+        case(sel)
+            'b00 : o = i0;
+            'b01 : o = i1;
+            'b10 : o = i2;
+            'b11 : o = i3;
+            default : o = i0;
         endcase
     end
 endmodule

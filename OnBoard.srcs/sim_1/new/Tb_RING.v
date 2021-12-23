@@ -3,11 +3,11 @@
 // Company: 
 // Engineer: Seok Hoon Choi
 // 
-// Create Date: 2021/05/22 21:17:49
-// Design Name: Muxplexer 4x1
-// Module Name: OnMUX4x1
-// Project Name: Muxplexer 4x1 
-// Target Devices: Zybo Z7-20
+// Create Date: 2021/12/23 11:07:37
+// Design Name: Testbench Ring Counter 
+// Module Name: Tb_RING
+// Project Name: Testbench Ring Counter 
+// Target Devices: simulation
 // Tool Versions: Vivado 2021.2
 // Description: 
 // 
@@ -20,12 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OnMUX4x1(
-    output [3:0]led,
-    input [3:0]sw,
-    input [3:0]btn
-    );
+module Tb_RING();
+    reg clk;
+    wire [3:0]Q;
     
-    Multiplexer_4x1#(1) mux(.o(led[0]), .sel(sw[1:0]), .i0(btn[0]), .i1(btn[1]), .i2(btn[2]), .i3(btn[3]));
+    Ring#(4) sim_RING(.Q(Q), .clk(clk));
+    
+    initial
+    begin
+        clk=1'b0;
+        forever
+            #10 clk = ~clk;
+    end
+    
+    initial
+        #1000 $stop;
 endmodule
-

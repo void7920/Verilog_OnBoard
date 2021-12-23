@@ -64,7 +64,7 @@ list
   - `PISO (load)`
   - `SISO`
   - `SIPO`
-  - `Universal Shift Register'
+  - `Universal Shift Register`
   
 - __etc__ (updated 05/22/2021 21:28:12 KST / GMT+9)
   - `Hz1` (No PWM)

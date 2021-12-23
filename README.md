@@ -36,8 +36,8 @@ list
   - `Full Subtractor / FS`
   - `Parallel Adder / PA` **(N-bit)**
   - `Parallel Adder/Subtractor / PAS` **(N-bit)**
-  - `Multiplexer 4x1 / MUX 4x1`
-  - `Demultiplexer 1x4 / DEMUX 1x4`
+  - `Multiplexer 4x1 / MUX 4x1` **(parameterized)**
+  - `Demultiplexer 1x4 / DEMUX 1x4` **(parameterized)**
   - Encoder (priority) / ENC **(N-bit)** (WiP)
   - `Decoder / DEC` **(N-bit)**
   - `Comparator / Comp` **(N-bit)**
@@ -60,10 +60,11 @@ list
   - Up-Down
 
 - Register **(WiP)**
-  - PIPO (load)
-  - PISO (load)
-  - SISO
-  - SIPO
-
+  - `PIPO (load)`
+  - `PISO (load)`
+  - `SISO`
+  - `SIPO`
+  - `Universal Shift Register'
+  
 - __etc__ (updated 05/22/2021 21:28:12 KST / GMT+9)
   - `Hz1` (No PWM)

@@ -8,7 +8,7 @@
 // Module Name: Tb_ENC
 // Project Name: Testbench Encoder 
 // Target Devices: simulation
-// Tool Versions: Vivado 2020.2
+// Tool Versions: Vivado 2021.2
 // Description: 
 // 
 // Dependencies: 

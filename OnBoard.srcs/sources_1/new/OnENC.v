@@ -8,7 +8,7 @@
 // Module Name: OnENC
 // Project Name: Encoder
 // Target Devices: Zybo Z7-20
-// Tool Versions: Vivado 2020.2.2
+// Tool Versions: Vivado 2021.2
 // Description: 
 // 
 // Dependencies: 
@@ -26,8 +26,8 @@ module OnENC(
     input [3:0]sw,
     input [3:0]btn
     );
-    parameter osize = 3;
-    parameter isize = 2**osize;
+    
+    parameter isize = 8;
     
     wire [isize-1:0]in = {sw, btn};
      

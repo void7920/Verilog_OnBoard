@@ -8,7 +8,7 @@
 // Module Name: OnDEC
 // Project Name: Decoder
 // Target Devices: Zybo Z7-20
-// Tool Versions: Vivado 2020.2.2
+// Tool Versions: Vivado 2021.2
 // Description: 
 // 
 // Dependencies: 

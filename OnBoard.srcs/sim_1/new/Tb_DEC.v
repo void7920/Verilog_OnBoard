@@ -8,7 +8,7 @@
 // Module Name: Tb_DEC
 // Project Name: Testbench Decoder 
 // Target Devices: simulation
-// Tool Versions: Vivado 2020.2.2
+// Tool Versions: Vivado 2021.2.2
 // Description: 
 // 
 // Dependencies: 

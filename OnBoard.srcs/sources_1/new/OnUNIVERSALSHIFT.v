@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Seok Hoon Choi
 // 
 // Create Date: 2021/12/23 12:05:31
-// Design Name: 
+// Design Name: Universal Shift Register
 // Module Name: OnUNIVERSALSHIFT
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
+// Project Name: Universal Shift Register 
+// Target Devices: Zybo Z7-20
+// Tool Versions: Vivado 2021.2
 // Description: 
 // 
 // Dependencies: 

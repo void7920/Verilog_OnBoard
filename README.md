@@ -57,7 +57,7 @@ list
   - `T Ripple`
   - `Ring`
   - `Johnson`
-  - Up-Down
+  - Up-Down (WiP)
 
 - Register (updated 12/23/2021 12:23:55 KST / GMT+9)
   - `PIPO (load)`

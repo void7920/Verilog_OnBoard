@@ -38,7 +38,7 @@ module Nbit_Parallel_Adder#(parameter size = 4) (
     
     genvar i;
     generate
-        for(i=0; i<=size-1; i=i+1)
+        for(i=0; i<=size; i=i+1)
         begin
             if(i==0)
                 Full_Adder fa(.carry_out(c_out[i]), .sum(sum[i]), .carry_in(1'b0), .in0(in0[i]), .in1(in1[i]));

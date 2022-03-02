@@ -39,7 +39,7 @@ module SISO #(parameter size=4) (
     always@(posedge clk or negedge reset_n)
     begin
         if(!reset_n)
-            R[0] <= 0;
+            R <= 0;
             
         else
             R <= {R[size-2:0], i};
